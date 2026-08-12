@@ -5,7 +5,7 @@ pipeline {
         } 
     }
     environment {
-      //  def appVersion = ""
+        def appVersion = ""
         acc_id = "160885265516"
         project = "roboshop"
         component = "catalogue"
@@ -28,7 +28,7 @@ pipeline {
                 script {
                     def packageJson = readJSON file: 'package.json'
                     // Extract the version property
-                    def appVersion = packageJson.version
+                     appVersion = packageJson.version
                     echo "The application version is: ${appVersion}"
                 }
             }
