@@ -55,6 +55,7 @@ pipeline {
                             docker push ${acc_id}.dkr.ecr.us-east-1.amazonaws.com/${project}/${component}:${appVersion}
                         """
                     }
+                 }
             }
         }
         stage('Deploy') {
@@ -91,3 +92,4 @@ pipeline {
             echo 'I will Run when it is failed'
         }
     }
+}
